@@ -1,0 +1,108 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css";
+@import "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css";
+
+/* Custom styles */
+.logo-placeholder {
+    width: 150px;
+    height: 75px;
+    background-image: url("/assets/images/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+}
+
+/* Custom Bootstrap overrides */
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --perfection-blue: #457a86 !important;
+    --perfection-mid-green: #90afa0 !important;
+    --perfection-anthracite: #344248 !important;
+    --perfection-gradient: #ffffff !important;
+}
+
+.card {
+    border-width: 0px !important;
+}
+
+.perfection-anthracite {
+    background-color: var(--perfection-anthracite) !important;
+}
+
+.perfection-mid-green {
+    background-color: var(--perfection-mid-green) !important;
+}
+
+.perfection-gradient {
+    background: linear-gradient(to right, var(--perfection-mid-green), var(--perfection-anthracite));
+}
+
+/* Enhanced Bootstrap Navigation */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary) !important;
+    font-weight: 600;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* CTA Button in Navbar */
+.navbar .btn-primary {
+    border-radius: 0.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .navbar .btn-primary {
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+}
